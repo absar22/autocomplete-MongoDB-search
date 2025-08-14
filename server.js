@@ -8,6 +8,11 @@ require('dotenv').config()
 
 const PORT = 8000
 
+if (!process.env.DB_STRING) {
+    console.error("ERROR: DB_STRING is missing! Set it in Render's Environment Variables.");
+    process.exit(1);
+}
+
 let db,
     dbConnectionStr = process.env.DB_STRING,
     dbName = 'sample_mflix',
@@ -19,6 +24,10 @@ MongoClient.connect(dbConnectionStr)
         db = client.db(dbName)
         collection = db.collection('movies')
     })
+    .catch(err => {
+        console.error("Failed to connect to MongoDB:", err);
+        process.exit(1);
+    });
 
 app.use(express.urlencoded({extended : true}))
 app.use(express.json())
