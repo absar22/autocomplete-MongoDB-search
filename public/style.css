@@ -1,80 +1,80 @@
-/* Reset basic margins/padding */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* General Page Styling */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f4f6f8;
-  color: #333;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-  padding: 40px;
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
 }
 
-/* Section styling */
-section.ui-widget {
-  background: #ffffff;
-  padding: 20px 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  margin-bottom: 20px;
-  width: 100%;
-  max-width: 500px;
+/* Header */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1rem;
+    color: #ecf0f1;
+}
+
+/* Search Section */
+.ui-widget {
+    max-width: 500px;
+    margin: 30px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
 }
 
 label {
-  font-size: 1.1rem;
-  font-weight: 500;
-  display: block;
-  margin-bottom: 8px;
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
 }
 
-/* Input styling */
 input#title {
-  width: 100%;
-  padding: 10px;
-  font-size: 1rem;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  outline: none;
-  transition: border-color 0.2s ease;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
 }
 
-input#title:focus {
-  border-color: #0078d4;
-  box-shadow: 0 0 5px rgba(0,120,212,0.3);
-}
-
-/* Autocomplete list styling */
+/* Cast List */
 #cast {
-  list-style: none;
-  margin-top: 10px;
+    margin-top: 15px;
+    list-style-type: none;
+    padding: 0;
 }
 
 #cast li {
-  padding: 8px 10px;
-  background: #fafafa;
-  border: 1px solid #eee;
-  margin-bottom: 5px;
-  border-radius: 4px;
-  transition: background 0.2s ease;
+    padding: 8px;
+    background: #f4f4f4;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 #cast li:hover {
-  background: #e6f2ff;
-  cursor: pointer;
+    background: #ddd;
 }
 
-/* Image section styling */
+/* Movie Poster */
 section img {
-  max-width: 250px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  display: block;
-  margin-top: 20px;
+    display: block;
+    margin: 20px auto;
+    max-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
