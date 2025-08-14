@@ -39,6 +39,13 @@ app.use(express.static('public'));
 
 app.get("/search", async (request,response) => {
     try {
+
+        const searchQuery = request.query.query;
+        if (!searchQuery) {
+            // If no query, return empty array or some default movies
+            return response.send([]);
+        }
+
         let result = await collection.aggregate([
             {
                 "$search" : {
